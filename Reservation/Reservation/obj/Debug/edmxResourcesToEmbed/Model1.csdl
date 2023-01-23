@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UdayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="Snum" />
+    </Key>
+    <Property Name="Snum" Type="Int32" Nullable="false" />
+    <Property Name="Hotel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Arrival" Type="DateTime" Precision="0" />
+    <Property Name="Depature" Type="DateTime" Precision="0" />
+    <Property Name="Types" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Guest" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="UdayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
+  </EntityContainer>
+</Schema>

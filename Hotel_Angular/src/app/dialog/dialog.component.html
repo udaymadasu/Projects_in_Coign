@@ -1,0 +1,116 @@
+<!-- <h2>NEW REGISTRATION</h2>
+<form [formGroup]="login">
+    <div class="class-group">
+        <label for="Snum">Snum</label>
+        <input type="text" class="formcontrol" placeholder="snum" formControlName="Snum"><br><br>
+        <label for="Hotel">Hotel</label>
+        <input type="text" class="formcontrol" placeholder="enter Hotel name" formControlName="Hotel"><br><br>
+        <label for="Arrival">Arrival</label>
+        <input type="date" class="formcontrol" placeholder="Arrival" formControlName="Arrival"><br><br>
+        <label for="Depature">Depature</label>
+        <input type="date" class="formcontrol" placeholder="Depature" formControlName="Depature"><br><br>
+        <label for="Types">Choose Types</label>
+              <select formControlName = "Types">
+                <option value="Economy">Economy</option>
+                <option value="Suite">Suite</option>
+                <option value="Luxury Suite">Luxury Suite</option>
+                <option value="Double">Double</option>
+
+              </select>
+        <label for="Guest">Guest</label>
+        <input type="text"  class="formcontrol" placeholder="Guest" formControlName="Guest"><br><br>
+        <label for="Price">Price</label>
+        <input type="text" class="formcontrol" placeholder="Price" formControlName="Price"><br><br>
+        <button class="btn btn-primary" (click)="save()">save</button>
+        <button class="btn btn-danger" (click)="reset()">reset</button>
+    </div>
+</form> -->
+<form [formGroup]="login">
+<h1 mat-dialog-title>Add new Reservation</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Snum</mat-label>
+    <input formControlName="Snum" matInput placeholder="enter no">
+    <mat-icon matSuffix>Sno</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Hotel</mat-label>
+    <input  formControlName="Hotel" matInput placeholder="enter name">
+  </mat-form-field>
+
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Arrival</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Depature</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+  <mat-form-field appearance="outline">
+    <mat-label>Arrival</mat-label>
+    <input   formControlName="Arrival" matInput [matDatepicker]="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Depature</mat-label>
+    <input   formControlName="Depature"  matInput [matDatepicker]="picker2">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Types</mat-label>
+    <mat-select formControlName="Types" placeholder="Select">
+      <mat-option value="Luxury Suite">Luxury Suite</mat-option>
+      <mat-option value="Suite">Suite</mat-option>
+      <mat-option value="Double">Double</mat-option>
+      <mat-option value="Economy">Economy</mat-option>
+    </mat-select>
+    
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Guest</mat-label>
+    <input   formControlName="Guest" matInput placeholder="enter no">
+    <mat-icon matSuffix>Guest</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input   formControlName="Price" matInput type="number" placeholder="enter price">
+    <span matTextPrefix>$ </span>
+    <span matTextPrefix>.00</span>
+
+</mat-form-field>
+</div>
+
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button style="margin: left 8px;"  mat-raised-button color="primary" (click)="Addres()">{{actionbtn}}</button>
+  </div>
+</form>
+
+  
+    
+   
+ 
+   <!-- <mat-form-field appearance="outline">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+
+
+
+  
+
+
+
+
+
